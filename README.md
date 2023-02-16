@@ -20,4 +20,10 @@
 ```
  - Once you've added your db config a listed above, go to the src folder from your terminal and execute `npx sequelize db:create`
 
+ ## Table
+
+ ### City -> id, name, created_at, updated_at
+ ### Airport -> id, name, Address, city_id, created_at, updated_at
+    RelationShip -> City has many Airports and Airport belongs to a city (one to Many)
+
  
