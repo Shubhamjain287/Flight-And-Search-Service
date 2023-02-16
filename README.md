@@ -26,4 +26,9 @@
  ### Airport -> id, name, Address, city_id, created_at, updated_at
     RelationShip -> City has many Airports and Airport belongs to a city (one to Many)
 
+ `npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer`
+
+ `npx sequelize db:migrate`
+
+ - Add `SYNC_DB` Variable in `.env` file so it will SYNC Database One Time Only.
  
