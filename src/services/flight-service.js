@@ -24,8 +24,9 @@ class FlightService{
         }
     }
 
-    async getFlightData(){
-        // todo
+    async getAllFlightData(data){
+        const flight = this.flightRepository.getAllFlight(data);
+        return flight;
     }
 
 }
