@@ -32,3 +32,24 @@
 
  - Add `SYNC_DB` Variable in `.env` file so it will SYNC Database One Time Only.
  
+ ## Airplane Model
+
+ - Creating Airplane Model
+ ```
+ npx sequelize  model:generate --name Airplane --attributes modelNumber:String,capacity:integer
+ ```
+
+ - Migration of Model from Development to Database.
+ ```
+ npx sequelize db:migrate
+ ```
+
+ - Adding Seeders File to Seed Airplane Names to Database.
+ ```
+ npx sequelize seed:generate --name add-airplanes
+ ```
+
+ - Seeding All the Values to Database
+ ```
+ npx sequelize db:seed:all
+ ```

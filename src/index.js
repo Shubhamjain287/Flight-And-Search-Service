@@ -5,7 +5,7 @@ const { PORT } = require("./config/serverConfig");
 
 const ApiRoutes = require("./routes/index");
 
-const { Airport , City } = require("./models/index");
+const { Airport , City, Airplane } = require("./models/index");
 const db = require("./models/index");
 
 const server = async () => {
@@ -21,9 +21,8 @@ const server = async () => {
         console.log(`Server is running on port ${PORT}`);
 
         if(process.env.SYNC_DB){
-            db.sequelize.sync({force: true});
+            db.sequelize.sync({alter: true});
         }
-
     });
 
 }
